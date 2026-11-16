@@ -1108,6 +1108,19 @@ body {
 
 /* ── Responsive Tweaks ── */
 @media (max-width: 768px) {
+    #home .hero-content {
+        position: static;
+        padding-bottom: 17rem;
+    }
+
+    #home .hero-sign-wrapper {
+        position: absolute;
+        right: 6%;
+        bottom: 64px;
+        z-index: 10;
+        width: auto;
+    }
+
     .cloud-1, .cloud-2, .cloud-3, .cloud-4, .cloud-5 {
         transform: scale(0.6);
     }
@@ -1134,8 +1147,9 @@ body {
         position: relative;
         right: auto;
         top: auto;
-        margin: 24px auto 0;
-        width: 180px;
+        margin: 0 auto;
+        width: 140px;
+        animation: none;
     }
 }
 

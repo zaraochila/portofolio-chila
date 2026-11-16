@@ -151,8 +151,13 @@ document.addEventListener('DOMContentLoaded', function () {
             if (powerlines) {
                 powerlines.style.transform = `translateY(${scrolled * 0.15}px)`;
             }
-            if (heroTrafficSign) {
+        }
+
+        if (heroTrafficSign) {
+            if (scrolled < window.innerHeight * 1.5 && window.matchMedia('(min-width: 769px)').matches) {
                 heroTrafficSign.style.transform = `translateY(${scrolled * 0.18}px)`;
+            } else {
+                heroTrafficSign.style.removeProperty('transform');
             }
         }
 
