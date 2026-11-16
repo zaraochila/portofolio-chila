@@ -90,6 +90,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
+    // ── Archive Mail Interactions ──
+    document.querySelectorAll('[data-mail-toggle]').forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            const card = toggle.closest('.mail-card');
+            const image = toggle.querySelector('.mail-image');
+            const isOpen = card.classList.toggle('is-open');
+            const paper = card.querySelector('.archive-paper');
+
+            image.src = isOpen ? image.dataset.openSrc : image.dataset.closedSrc;
+            toggle.setAttribute('aria-expanded', String(isOpen));
+            if (paper) {
+                paper.disabled = !isOpen;
+                paper.setAttribute('aria-hidden', String(!isOpen));
+            }
+        });
+    });
+
+    const partisiDialog = document.getElementById('partisi-dialog');
+    const partisiPaper = document.querySelector('[data-open-partisi]');
+    const closePartisi = partisiDialog.querySelector('[data-close-partisi]');
+
+    partisiPaper.addEventListener('click', function () {
+        partisiDialog.showModal();
+    });
+
+    closePartisi.addEventListener('click', function () {
+        partisiDialog.close();
+    });
+
+    partisiDialog.addEventListener('click', function (event) {
+        if (event.target === partisiDialog) {
+            partisiDialog.close();
+        }
+    });
+
     // ── Bubble Particles Generator ──
     const bubblesContainer = document.getElementById('bubbles');
     const BUBBLE_COUNT = 15;

@@ -66,6 +66,7 @@
                         <a href="#home" class="nav-link active">Home</a>
                         <a href="#about" class="nav-link">About</a>
                         <a href="#experience" class="nav-link">Experience</a>
+                        <a href="#archive" class="nav-link">Arsip Materi</a>
                         <a href="#music" class="nav-link">Music</a>
                         <a href="#contact" class="nav-link">Contact</a>
                     </div>
@@ -89,6 +90,9 @@
             <a href="#experience"
                 class="block px-6 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-colors">✦
                 Experience</a>
+            <a href="#archive"
+                class="block px-6 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-colors">✦ Arsip
+                Materi</a>
             <a href="#music"
                 class="block px-6 py-3 text-white/90 hover:bg-white/10 hover:text-white transition-colors">✦
                 Music</a>
@@ -324,7 +328,7 @@
                                         <i class="fas fa-pen-nib mr-1"></i>Desain Grafis
                                     </span>
                                     <span class="skill-tag text-xs">
-                                        <i class="fas fa-book-open mr-1"></i>Reading
+                                        <i class="fas fa-book-open mr-1"></i>Reading & Watching
                                     </span>
                                     <span class="skill-tag text-xs">
                                         <i class="fas fa-gamepad mr-1"></i>Gaming
@@ -395,7 +399,71 @@
 
     </section>
 
-    <!-- ============ 4. PEMUTAR MUSIK (Music Player Section) ============ -->
+    <!-- ============ 4. ARSIP MATERI ============ -->
+    <section id="archive" class="py-24 relative overflow-hidden archive-section">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal-up">
+                <p class="text-sky-500 font-bold tracking-widest uppercase text-sm mb-2">✦ Koleksi Belajar</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-sky-800 mb-3">#3 Arsip Materi</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-sky-400 to-sky-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <article class="mail-card reveal-up is-partisi">
+                    <div class="mail-glass">
+                        <button class="mail-toggle" type="button" data-mail-toggle
+                            aria-label="Buka arsip Partisi" aria-expanded="false">
+                            <img class="mail-image" src="assets/mail-close.png" data-closed-src="assets/mail-close.png"
+                                data-open-src="assets/mail-open.png" alt="" draggable="false">
+                        </button>
+                        <button class="archive-paper" type="button" data-open-partisi
+                            aria-label="Buka materi Partisi">
+                            <span>PARTISI</span>
+                        </button>
+                    </div>
+                    <h3 class="mail-title">PARTISI 2026</h3>
+                </article>
+
+                <article class="mail-card reveal-up">
+                    <div class="mail-glass">
+                        <button class="mail-toggle" type="button" data-mail-toggle
+                            aria-label="Buka arsip kosong" aria-expanded="false">
+                            <img class="mail-image" src="assets/mail-close.png" data-closed-src="assets/mail-close.png"
+                                data-open-src="assets/mail-open.png" alt="" draggable="false">
+                        </button>
+                    </div>
+                    <h3 class="mail-title">?</h3>
+                </article>
+
+                <article class="mail-card reveal-up">
+                    <div class="mail-glass">
+                        <button class="mail-toggle" type="button" data-mail-toggle
+                            aria-label="Buka arsip kosong" aria-expanded="false">
+                            <img class="mail-image" src="assets/mail-close.png" data-closed-src="assets/mail-close.png"
+                                data-open-src="assets/mail-open.png" alt="" draggable="false">
+                        </button>
+                    </div>
+                    <h3 class="mail-title">?</h3>
+                </article>
+            </div>
+        </div>
+
+        <dialog id="partisi-dialog" class="partisi-dialog" aria-labelledby="partisi-dialog-title">
+            <div class="partisi-dialog-content">
+                <div class="flex items-center justify-between gap-4 mb-5">
+                    <h3 id="partisi-dialog-title" class="text-2xl md:text-3xl font-extrabold text-sky-800">Materi
+                        PARTISI</h3>
+                    <button class="partisi-dialog-close" type="button" data-close-partisi
+                        aria-label="Tutup materi Partisi">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="partisi-content" aria-label="Area materi Partisi"></div>
+            </div>
+        </dialog>
+    </section>
+
+    <!-- ============ 5. PEMUTAR MUSIK (Music Player Section) ============ -->
     <section id="music" class="py-24 relative overflow-hidden music-section">
         <!-- Sky & Clouds Transition -->
         <div class="absolute top-0 left-0 w-full" aria-hidden="true">
