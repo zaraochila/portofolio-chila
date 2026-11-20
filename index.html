@@ -139,12 +139,11 @@
             class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between w-full pt-28 pb-40 md:pb-32 hero-content">
             <!-- Hero Text (Kiri) - Bersih & Elegan tanpa foto -->
             <div class="md:w-7/12 text-center md:text-left mb-10 md:mb-0 reveal-left">
-                <div
-                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-5 shadow-sm">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs md:text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
                     <span class="text-amber-400">✦</span> Welcome to my portfolio! :)
                 </div>
                 <h1
-                    class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight drop-shadow-lg">
+                    class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight drop-shadow-lg">
                     Halo, Saya<br>
                     <span class="text-gradient-name">Denise Zara Ochila</span>
                 </h1>
@@ -296,8 +295,8 @@
                                 <span>Hi, Welcome to my portfolio!</span>
                             </h4>
                             <p class="text-base md:text-lg text-sky-900/80 leading-relaxed">
-                                Saya denise zara ochila, kalian bisa panggil aku denise/chila ! ^_^
-                                saya merupakan mahasiswa Sistem Informasi di Universitas Tanjungpura yang memiliki
+                                Aku Denise Zara Ochila! kalian bisa panggil aku denise/chila ^_^
+                                Aku merupakan mahasiswa Sistem Informasi di Universitas Tanjungpura yang memiliki
                                 ketertarikan mendalam pada desain dan teknologi. ✦
                             </p>
                         </div>
@@ -324,15 +323,26 @@
                                 </div>
                                 <h4 class="font-extrabold text-lg mb-2 text-sky-800">Skills & Hobi</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="skill-tag text-xs">
+                                    <button class="skill-tag text-xs cursor-pointer border-0 font-nunito" type="button"
+                                        data-open-image-dialog aria-haspopup="dialog"
+                                        aria-controls="design-portfolio-dialog">
                                         <i class="fas fa-pen-nib mr-1"></i>Desain Grafis
-                                    </span>
-                                    <span class="skill-tag text-xs">
-                                        <i class="fas fa-book-open mr-1"></i>Reading & Watching
-                                    </span>
-                                    <span class="skill-tag text-xs">
+                                    </button>
+                                    <a class="skill-tag text-xs cursor-pointer"
+                                        href="https://myanimelist.net/mangalist/rchila"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fas fa-book-open mr-1"></i>Reading
+                                    </a>
+                                    <a class="skill-tag text-xs cursor-pointer"
+                                        href="https://myanimelist.net/animelist/rchila"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fas fa-face-grin-stars mr-1"></i>Watching
+                                    </a>
+                                    <button class="skill-tag text-xs cursor-pointer border-0 font-nunito" type="button"
+                                        data-open-image-dialog aria-haspopup="dialog"
+                                        aria-controls="games-dialog">
                                         <i class="fas fa-gamepad mr-1"></i>Gaming
-                                    </span>
+                                    </button>
                                     <a class="skill-tag text-xs cursor-pointer"
                                         href="https://open.spotify.com/user/31aktekuwgy4ea7vsa3shq6pmpk4?si=0ef88a6055c8476f"
                                         target="_blank" rel="noopener noreferrer">
@@ -340,6 +350,9 @@
                                     </a>
                                     <span class="skill-tag text-xs">
                                         <i class="fab fa-figma mr-1"></i>Figma
+                                    </span>
+                                    <span class="skill-tag text-xs">
+                                        <i class="fas fa-palette mr-1"></i>Canva
                                     </span>
                                 </div>
                             </div>
@@ -367,7 +380,7 @@
                 <div class="w-24 h-1.5 bg-gradient-to-r from-sky-400 to-sky-600 mx-auto rounded-full"></div>
             </div>
 
-            <div class="space-y-8 max-w-3xl mx-auto">
+            <div class="space-y-12 max-w-3xl mx-auto">
                 <!-- Timeline Item 1 -->
                 <div class="timeline-item reveal-left">
                     <div class="timeline-dot"></div>
@@ -380,13 +393,28 @@
                             </div>
                             <span class="year-badge">2024-2025</span>
                         </div>
-                        <p class="text-sky-700/70 mt-3 leading-relaxed"> Finalis OSN-P Informatika 2025 </p>
-                        <p class="text-sky-700/70 mt-3 leading-relaxed"> Juara 3 OSN-K Informatika 2025</p>
-                        <p class="text-sky-700/70 mt-3 leading-relaxed"> Peserta OSN-K Matematika 2024</p>
+                        <p class="text-sky-700/70 mt-3 leading-relaxed"> OSN-P Informatika 2025 </p>
+                        <p class="text-sky-700/70 mt-3 leading-relaxed"> OSN-K Informatika 2025</p>
+                        <p class="text-sky-700/70 mt-3 leading-relaxed"> OSN-K Matematika 2024</p>
                     </div>
                 </div>
 
                 <!-- Timeline Item 2 -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="flex items-start justify-between flex-wrap gap-2">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-extrabold text-sky-800">OSIS
+                                </h3>
+                                <p class="text-sky-500 font-bold text-sm">Kepengurusan OSIS </p>
+                            </div>
+                            <span class="year-badge">2024/2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
                 <div class="timeline-item reveal-left">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
@@ -467,6 +495,36 @@
             </div>
         </dialog>
     </section>
+
+    <dialog id="design-portfolio-dialog" class="portfolio-image-dialog"
+        aria-label="Portofolio desain grafis">
+        <div class="portfolio-image-dialog-content">
+            <div class="flex items-center justify-between gap-4 mb-4">
+                <button class="partisi-dialog-close" type="button" data-close-image-dialog
+                    aria-label="Tutup portofolio desain grafis">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+            <div class="portfolio-image-scroll" role="region" tabindex="0"
+                aria-label="Gambar portofolio desain grafis">
+                <img src="assets/design-portfolio.png" alt="Portofolio desain grafis Denise" draggable="false">
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="games-dialog" class="portfolio-image-dialog" aria-label="Games">
+        <div class="portfolio-image-dialog-content">
+            <div class="flex items-center justify-between gap-4 mb-4">
+                <button class="partisi-dialog-close" type="button" data-close-image-dialog
+                    aria-label="Tutup gambar games">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+            <div class="portfolio-image-scroll" role="region" tabindex="0" aria-label="Gambar games">
+                <img src="assets/games.png" alt="Games" draggable="false">
+            </div>
+        </div>
+    </dialog>
 
     <!-- ============ 5. PEMUTAR MUSIK (Music Player Section) ============ -->
     <section id="music" class="py-24 relative overflow-hidden music-section">

@@ -125,6 +125,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    document.querySelectorAll('[data-open-image-dialog]').forEach(openButton => {
+        const dialog = document.getElementById(openButton.getAttribute('aria-controls'));
+        const closeButton = dialog.querySelector('[data-close-image-dialog]');
+        const imageScroll = dialog.querySelector('.portfolio-image-scroll');
+
+        openButton.addEventListener('click', function () {
+            dialog.showModal();
+            document.body.classList.add('portfolio-image-dialog-open');
+            imageScroll.scrollTop = 0;
+        });
+
+        closeButton.addEventListener('click', function () {
+            document.body.classList.remove('portfolio-image-dialog-open');
+            dialog.close();
+        });
+
+        dialog.addEventListener('close', function () {
+            if (!dialog.open) {
+                document.body.classList.remove('portfolio-image-dialog-open');
+            }
+        });
+
+        dialog.addEventListener('click', function (event) {
+            if (event.target === dialog) {
+                document.body.classList.remove('portfolio-image-dialog-open');
+                dialog.close();
+            }
+        });
+    });
+
     // ── Bubble Particles Generator ──
     const bubblesContainer = document.getElementById('bubbles');
     const BUBBLE_COUNT = 15;
