@@ -452,9 +452,115 @@ body {
     white-space: nowrap;
 }
 
+.glass-card.revealed .education-link {
+    animation: education-bob 650ms ease-out;
+}
+
+.glass-card.revealed .education-entry:nth-child(2) .education-link {
+    animation-delay: 120ms;
+}
+
+.glass-card.revealed .education-entry:nth-child(3) .education-link {
+    animation-delay: 240ms;
+}
+
+.education-link:active {
+    transform: scale(0.97);
+}
+
 .education-link:focus-visible {
     outline: 2px solid #0284c7;
     outline-offset: 2px;
+}
+
+@keyframes education-bob {
+    0% { transform: translateY(7px) scale(0.97); }
+    70% { transform: translateY(-2px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/* Blue clouds drift across the About section like they do in Home. */
+.about-clouds-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.about-cloud,
+.about-cloud::before,
+.about-cloud::after {
+    position: absolute;
+    background: #38bdf8;
+    border-radius: 100px;
+}
+
+.about-cloud {
+    height: 45px;
+    opacity: 0.16;
+    animation: cloud-drift 42s linear infinite;
+}
+
+.about-cloud::before,
+.about-cloud::after {
+    content: '';
+}
+
+.about-cloud::before {
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    left: 28px;
+}
+
+.about-cloud::after {
+    width: 55px;
+    height: 55px;
+    top: -24px;
+    right: 32px;
+}
+
+.about-cloud-1 {
+    top: 16%;
+    left: -5%;
+    width: 190px;
+}
+
+.about-cloud-2 {
+    top: 37%;
+    left: 28%;
+    width: 160px;
+    opacity: 0.12;
+    animation-duration: 48s;
+    animation-delay: -12s;
+}
+
+.about-cloud-3 {
+    top: 58%;
+    left: 62%;
+    width: 220px;
+    opacity: 0.14;
+    animation-duration: 40s;
+    animation-delay: -22s;
+}
+
+.about-cloud-4 {
+    top: 77%;
+    left: 90%;
+    width: 175px;
+    opacity: 0.11;
+    animation-duration: 50s;
+    animation-delay: -8s;
+}
+
+.about-cloud-5 {
+    top: 88%;
+    left: 115%;
+    width: 200px;
+    opacity: 0.13;
+    animation-duration: 44s;
+    animation-delay: -16s;
 }
 
 /* ── Timeline (Experience) ── */
