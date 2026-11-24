@@ -406,6 +406,57 @@ body {
     box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
 }
 
+.education-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.education-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.education-year {
+    position: relative;
+    margin-left: 0.75rem;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 50px;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    color: #0369a1;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.education-year::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -0.65rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 0 3px #e0f2fe;
+    transform: translateY(-50%);
+}
+
+.education-link {
+    cursor: pointer;
+    padding: 8px 14px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+}
+
+.education-link:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 2px;
+}
+
 /* ── Timeline (Experience) ── */
 .timeline-item {
     position: relative;
@@ -984,6 +1035,62 @@ body {
     border: 1px dashed rgba(2, 132, 199, 0.25);
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.56);
+    padding: clamp(1rem, 3vw, 1.5rem);
+    color: #334155;
+    line-height: 1.7;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+.partisi-session + .partisi-session {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(2, 132, 199, 0.18);
+}
+
+.partisi-session-title {
+    margin-bottom: 1rem;
+    color: #0369a1;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.partisi-topic + .partisi-topic {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(2, 132, 199, 0.14);
+}
+
+.partisi-topic-title {
+    color: #075985;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.partisi-speaker {
+    margin: 0.2rem 0 0.8rem;
+    color: #0284c7;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.partisi-topic p + p {
+    margin-top: 0.75rem;
+}
+
+.partisi-subtopic-title {
+    margin-top: 1rem;
+    color: #0c4a6e;
+    font-weight: 800;
+}
+
+.partisi-compass-list {
+    margin: 0.75rem 0 0 1.5rem;
+    list-style: decimal;
+}
+
+.partisi-compass-list li + li {
+    margin-top: 0.5rem;
 }
 
 .portfolio-image-dialog {
@@ -1162,27 +1269,21 @@ body.portfolio-image-dialog-open {
 
 /* Center Disc Label (Aesthetic Artwork Label) */
 .disc-center-label {
-    width: 90px;
-    height: 90px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #38bdf8 0%, #0284c7 50%, #f5a623 100%);
     border: 3px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
     z-index: 3;
+    overflow: hidden;
 }
 
-.disc-center-hole {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #0284c7;
-    border: 3px solid rgba(255, 255, 255, 0.9);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+.disc-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Vinyl Spinning Animation */
