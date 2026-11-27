@@ -432,18 +432,6 @@ body {
     font-weight: 700;
 }
 
-.education-year::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -0.65rem;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #38bdf8;
-    box-shadow: 0 0 0 3px #e0f2fe;
-    transform: translateY(-50%);
-}
 
 .education-link {
     cursor: pointer;
